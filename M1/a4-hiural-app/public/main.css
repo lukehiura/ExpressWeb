@@ -1,0 +1,199 @@
+/*  ===== MOBILE styles (reside at the top and are inherited by all devices) ===== */
+/*  ===== See tablet, desktop, and print @media queries at the bottom. */
+
+
+/*   ----- Imports  -----  */
+  /* Add fonts from the app's server 
+    @font-face {                
+      font-family: 'FontName';
+      src: url('FontName.woff2') format('woff2');
+    } 
+    ...or hosted services like Google Fonts 
+    @import url(//fonts.googleapis.com/css?family=Font+Name);
+  */
+  
+  /* @import 'node_modules/modern-normalize/modern-normalize.css'; */
+        /* npm install modern-normalize
+          Resets elements for browser consistency.  
+          https://www.npmjs.com/package/modern-normalize
+        */         
+  
+  /* Component-specific stylesheets, if any. 
+    @import "component1.css";   
+  */
+
+  
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+  
+
+/*   ----- Variables  -----  */
+:root {
+    --color-dark: #35495E;
+    --color-medium: #5C798E;
+    --color-light: #A2B3C3;
+    --color-accent: #FFB344;
+    --color-transparent: rgba(53, 73, 94, 0.5);
+  }
+  
+  /* Viewport - elements inherited by all remaining elements */
+  body {
+    background-color: var(--color-light);
+    background-image: url(images/background-image-chicago.jpg);
+    color: var(--color-dark);
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  
+  /* Header */
+  header {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  /* Main */
+  main {
+    background-color: var(--color-light);
+    color: var(--color-dark);
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: var(--color-medium);
+    color: var(--color-light);
+    padding: 20px;
+  }
+  
+  /* Navigation */
+  nav {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .nav-bar {
+    list-style-type: none;
+    display: flex;
+  }
+  
+  nav a {
+    display: inline-block;
+    text-decoration: none;
+    background-color: var(--color-accent);
+    color: var(--color-dark);
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  
+  nav a:hover {
+    background-color: var(--color-medium);
+  }
+  
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .figure {
+    display: flex;
+    flex-direction: column; /* Added flex-direction to stack caption below image */
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    flex-basis: 20%;
+    max-width: calc(20% - 20px);
+    position: relative;
+  }
+  
+  .figure img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .figure figcaption {
+    margin-top: 10px; /* Added margin top to create spacing between image and caption */
+    text-align: center; /* Center align the caption text */
+  }
+
+  :required {
+    border:1px solid red;
+    padding: 10px;
+    margin-bottom: 20px;
+    color: var(--color-dark);
+  }
+
+  :valid{
+    border: 1px solid green;
+    padding: 10px;
+    margin-bottom: 20px;
+    color: var(--color-dark);
+  }
+
+
+
+  textarea#comments {
+    height: 150px;
+    width: calc(100% - 500px);
+    font: Roboto;
+  }
+
+
+fieldset {
+  border: 2px solid var(--color-dark);
+  padding: 10px;
+  margin-bottom: 20px;
+  color: var(--color-dark);
+}
+
+
+
+legend {
+  color: var(--color-dark);
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding: 2px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  font-size: larger;
+  font-family: Roboto;
+  padding: 2px;
+}
+
+
+:focus {
+  border-color: var(--color-accent); 
+  color: var(--color-dark);
+}
+
+::placeholder{
+  color: var(--color-light);
+}
+
+button {
+  padding: 10px 20px;
+  background-color: var(--color-accent);
+  color: var(--color-dark);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+select {
+  padding: 5px;
+  font-size: 16px;
+}
+
