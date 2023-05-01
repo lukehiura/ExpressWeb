@@ -12,6 +12,7 @@ app.use(express.urlencoded({
 
 
 
+
 app.post('/contact', function(req, res) {
     const firstName = req.body.first;
     const lastName = req.body.last;
@@ -77,7 +78,44 @@ app.post('/contact', function(req, res) {
     </ul>
 
     `
-    res.send(`${htmlTop}${response}${htmlBot}`);
+    
+
+
+
+    const nodemailer = require("nodemailer");
+
+    // async..await is not allowed in global scope, must use a wrapper
+    async function main() {
+        try {
+          let testAccount = await nodemailer.createTestAccount();
+      
+          let transporter = nodemailer.createTransport({
+            host: "smtp.ethereal.email",
+            port: 587,
+            secure: false,
+            auth: {
+              user: testAccount.user,
+              pass: testAccount.pass,
+            },
+          });
+      
+          let info = await transporter.sendMail({
+            from: testAccount.user,
+            to: "lhiur001@gmail.com",
+            subject: "Hello ✔",
+            text: JSON.stringify(req.body),
+            html: response,
+          });
+      
+          console.log("Message sent: %s", info.messageId);
+          console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
+      
+          res.send(`${htmlTop}${response}${htmlBot}`);
+        } catch (err) {
+          console.error(err);
+        }
+      }
+
 });
 
 app.use(express.static('public'));
