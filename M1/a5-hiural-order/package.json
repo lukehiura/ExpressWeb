@@ -1,0 +1,28 @@
+{
+  "name": "a4-hiural-app",
+  "version": "1.0.0",
+  "description": "Functionality to generate a new contact form",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "author": "Luke",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemailer": "^4.1.0",
+    "nodemon": "^2.0.22"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lhiura001/CS290.git"
+  },
+  "keywords": [
+    "Website"
+  ],
+  "bugs": {
+    "url": "https://github.com/lhiura001/CS290/issues"
+  },
+  "homepage": "https://github.com/lhiura001/CS290#readme"
+}
