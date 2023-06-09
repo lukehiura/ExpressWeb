@@ -1,0 +1,383 @@
+/*  ===== MOBILE styles (reside at the top and are inherited by all devices) ===== */
+/*  ===== See tablet, desktop, and print @media queries at the bottom. */
+
+
+/*   ----- Imports  -----  */
+  /* Add fonts from the app's server 
+    @font-face {                
+      font-family: 'FontName';
+      src: url('FontName.woff2') format('woff2');
+    } 
+    ...or hosted services like Google Fonts 
+    @import url(//fonts.googleapis.com/css?family=Font+Name);
+  */
+  
+  /* @import 'node_modules/modern-normalize/modern-normalize.css'; */
+        /* npm install modern-normalize
+          Resets elements for browser consistency.  
+          https://www.npmjs.com/package/modern-normalize
+        */         
+  
+  /* Component-specific stylesheets, if any. 
+    @import "component1.css";   
+  */
+
+  
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+  
+
+/*   ----- Variables  -----  */
+:root {
+    --color-dark: #35495E;
+    --color-medium: #5C798E;
+    --color-light: #A2B3C3;
+    --color-accent: #FFB344;
+    --color-transparent: rgba(53, 73, 94, 0.5);
+  }
+  
+  /* Viewport - elements inherited by all remaining elements */
+  body {
+    background-color: var(--color-light);
+    background-image: url(images/background-image-chicago.jpg);
+    color: var(--color-dark);
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  
+  /* Header */
+  header {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  /* Main */
+  main {
+    background-color: var(--color-light);
+    color: var(--color-dark);
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: var(--color-medium);
+    color: var(--color-light);
+    padding: 20px;
+  }
+  
+  /* Navigation */
+  nav {
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-primary);
+    padding: 10px;
+    
+  }
+  
+  .nav-bar {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav a {
+    display: inline-block;
+    text-decoration: none;
+    background-color: var(--color-accent);
+    color: var(--color-dark);
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    border: 2px solid var(--color-dark);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 2em;
+    margin-top: 2em;
+    
+
+  }
+  
+  nav a:hover {
+    background-color: var(--color-medium);
+    color: var(--color-light);
+    border-color: var(--color-medium);
+  }
+  
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .figure {
+    display: flex;
+    flex-direction: column; /* Added flex-direction to stack caption below image */
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    flex-basis: 20%;
+    max-width: calc(20% - 20px);
+    position: relative;
+  }
+  
+  .figure img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .figure figcaption {
+    margin-top: 10px; /* Added margin top to create spacing between image and caption */
+    text-align: center; /* Center align the caption text */
+  }
+
+  :required {
+    border:1px solid red;
+    padding: 10px;
+    margin-bottom: 20px;
+    color: var(--color-dark);
+  }
+
+  :valid{
+    border: 1px solid green;
+    padding: 10px;
+    margin-bottom: 20px;
+    color: var(--color-dark);
+  }
+
+
+
+  textarea#comments {
+    height: 150px;
+    width: calc(100% - 500px);
+    font: Roboto;
+  }
+
+
+fieldset {
+  border: 2px solid var(--color-dark);
+  padding: 10px;
+  margin-bottom: 20px;
+  color: var(--color-dark);
+}
+
+
+
+legend {
+  color: var(--color-dark);
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding: 2px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  font-size: larger;
+  font-family: Roboto;
+  padding: 2px;
+}
+
+
+:focus {
+  border-color: var(--color-accent); 
+  color: var(--color-dark);
+}
+
+::placeholder{
+  color: var(--color-light);
+}
+
+button {
+  padding: 10px 20px;
+  background-color: var(--color-accent);
+  color: var(--color-dark);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+select {
+  padding: 5px;
+  font-size: 16px;
+}
+
+/* Style for required labels */
+label.required:after {
+  content: "*";
+  color: red;
+}
+
+/* Style for form inputs */
+input, textarea, select {
+  font-family: inherit;
+  font-size: 16px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Style for form button */
+button[type=submit] {
+  font-family: inherit;
+  font-size: 16px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+}
+
+table {
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+caption {
+  background-color: var(--color-accent);
+  color: var(--color-dark);
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding: 10px;
+  text-align: center;
+}
+
+tr th,
+tr td {
+  border: 1px solid var(--color-medium);
+  padding: 10px;
+}
+
+tr th {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+}
+
+tr td {
+  background-color: var(--color-light);
+  color: var(--color-dark);
+}
+
+#thank-you-message {
+  font-family: Arial, sans-serif;
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#thank-you-message + p {
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+#order-details {
+  font-family: Arial, sans-serif;
+  font-size: 18px; 
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+#order-details p {
+  margin: 10px 0;
+}
+
+#order-details label {
+  font-weight: bold;
+}
+
+#delivery-instructions {
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+#delivery-instructions p {
+  margin: 10px 0;
+}
+
+#delivery-instructions label {
+  font-weight: bold;
+}
+
+#descriptive-file-name,
+#external-stylesheets,
+#forms,
+#DataTypes,
+#dom-changes {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  padding: 10px;
+  text-decoration: underline;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  font-size: 1.2em;
+  color: var(--color-dark);
+  background-color: var(--color-accent);
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+  transition: background-color 0.2s ease-in-out;
+}
+
+#descriptive-file-name:hover,
+#external-stylesheets:hover,
+#forms:hover,
+#DataTypes:hover, 
+#dom-changes:hover {
+  background-color: var(--color-medium);
+  color: var(--color-accent);
+}
+
+#staffTable {
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  width: 100%;
+  color: var(--color-dark);
+  text-align: center;
+}
+
+#staffTable caption {
+  background-color: var(--color-accent);
+  color: var(--color-dark);
+  font-weight: bold;
+  padding: 10px;
+  text-align: center;
+}
+
+#staffTable tr th,
+#staffTable tr td {
+  border: 1px solid var(--color-medium);
+  padding: 10px;
+}
+
+#staffTable tr th {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+}
+
+#staffTable tr td {
+  background-color: var(--color-light);
+  color: var(--color-dark);
+}
+
+#staffTable tr:nth-child(even) {
+  background-color: var(--color-transparent);
+}
+
+/* Anchor styles */
+#staffTable a:link {
+  color: var(--color-accent);
+}
+

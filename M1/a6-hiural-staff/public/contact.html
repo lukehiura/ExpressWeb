@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Luke Hiura</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <header>
+        <h1>Luke Hiura</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="contact.html">Contact</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="order.html">Order Now</a>
+        <a href="staff.html">Staff</a>
+    </nav>
+    <main>
+        <section>
+            <h2>Contact</h2>
+            <p>Welcome to our online registration form! This form is designed 
+                to collect important information from you, such as your name, 
+                email address, and other details that will help us serve you better. 
+                By filling out this form, you'll be able to register for our services, 
+                sign up for our Notifications, or simply get in touch with us. Please fill 
+                out all the required fields marked with a red border to ensure a smooth 
+                registration process. Thank you for choosing to connect with us!</p>
+
+            <article>
+
+            </article>
+            
+                <form action="/contact" method="POST">
+                    <fieldset>
+                        <legend>Please Fill Out The Form Below if Interested</legend>
+                        <p>
+                            <label for="first" class="required">First Name:
+                              <input type="text" 
+                                    name="first" 
+                                    id="first" 
+                                    size="30" 
+                                    maxlength="50" 
+                                    required  
+                                    placeholder="First Name" 
+                                    autofocus />  
+                            </label> 
+                        </p>
+                        <p>
+                            <label for="last" class="required">Last Name:
+                                <input type="text" 
+                                      name="last" 
+                                      id="last" 
+                                      size="30" 
+                                      maxlength="50" 
+                                      required 
+                                      placeholder="Last Name" 
+                                      autofocus />
+                              </label>
+                        </p> 
+                        <p> 
+                            <label for="LinkedIn">LinkedIn (Optional):
+                                <input type="LinkedIn" 
+                                      name="LinkedIn" 
+                                      id="LinkedIn" 
+                                      size="30" 
+                                      maxlength="50"  
+                                      placeholder="LinkedIn URL" 
+                                      autofocus />
+                              </label>
+                        </p>
+                        <p>
+                            <label for="email" class="required">Email:
+                                <input type="email" 
+                                    name="email" id="email" 
+                                    size="30" maxlength="100" 
+                                    required 
+                                    pattern="[^ @]+@[^ @]+.[a-z]+"
+                                    placeholder="Email Address" />
+                            </label>
+                        </p>
+                        <p>
+                            <label for="phone" class="required">Phone Number:
+                                
+                                <input type="tel" 
+                                    id="phone" 
+                                    name="phone" 
+                                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                                    placeholder="xxx-xxx-xxxx" 
+                                    required> 
+                            </label>
+                        </p>
+                        <p>
+                            <label for="comments" class="required">Include a Message:
+                                <br>  
+                                <textarea 
+                                    name="comments" 
+                                    id="comments" 
+                                    minlength="3" 
+                                    maxlength="250"  
+                                    required 
+                                    placeholder="Write 250 characters or less."></textarea>
+                            </label>
+                        </p>
+                        <p>
+                            <label for="contactMethod" class="required">How would you like to be contacted?</label>
+                            <select name="contactMethod" id="how" required>
+                                <option value="" selected disabled>Contact Method</option>
+                                <option value="Email">Email</option>
+                                <option value="PhoneNumber">Phone Number</option>
+                                <option value="LinkedIn">LinkedIn</option>
+                                <option value="Other">Other (Specify in the Message)</option>
+                            </select>
+                        </p>
+                        <p>
+                            <label for="gender" class="required">Please Specify Gender:</label>
+                            <br>
+                            <label for="male">Male</label>
+                            <input type="radio" name="gender" id="male" value="male" required>
+                            <label for="female">Female</label>
+                            <input type="radio" name="gender" id="female" value="female" required>
+                            <label for="nonbinary">Non-binary</label>
+                            <input type="radio" name="gender" id="nonbinary" value="non-binary" required>
+                        </p>
+                          
+                        <p>
+                            <label>Select Event Notifications You Would Like to Receive:</label>
+                            <br>
+                            <input type="checkbox" name="notification[]" value="upcoming-events">Upcoming Events<br>
+                            <input type="checkbox" name="notification[]" value="workshops">Workshops<br>
+                            <input type="checkbox" name="notification[]" value="conferences">Conferences<br>
+                            <input type="checkbox" name="notification[]" value="webinars">Webinars<br>
+                        </p>
+
+                        <button type="submit">Submit review</button>
+                    </fieldset>              
+                </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Luke Webdev. All rights reserved.</p>
+    </footer>
+</body>
+</html>

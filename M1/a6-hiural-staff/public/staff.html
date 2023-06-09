@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Staff Page</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='random.js'></script>
+</head>
+<body>
+    <header>
+      <h1>Luke Hiura</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="contact.html">Contact</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="order.html">Order Now</a>
+        <a href="staff.html">Staff</a>
+    </nav>
+    <main>
+      <section>
+        <h2>Staff Page</h2>
+        <!-- Add content specific to the Staff page here -->
+        <article>
+            <p>This page showcases information about staff members. Click the buttons below to request data.</p>
+            <button id="browserDataButton">From Browser</button>
+            <button id="serverDataButton">From Server</button>
+            <button id="express-button">From Express</button>
+            <table id="staffTable">
+              <thead>
+                <tr>
+                  <th>Portrait</th>
+                  <th>Name/Email</th>
+                  <th>Telephone</th>
+                  <th>City</th>
+                </tr>
+              </thead>
+              <tbody id="tableBody"></tbody>
+            </table>
+        </article>
+      </section>
+    </main>
+</body>
+</html>

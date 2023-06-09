@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package cs361;
+
+message Message {
+  string text = 1;
+}
+
+service MessageService {
+  rpc SendMessage(Message) returns (Message) {}
+}
