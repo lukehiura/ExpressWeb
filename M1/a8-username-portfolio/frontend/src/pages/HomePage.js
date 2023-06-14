@@ -1,0 +1,314 @@
+import React from 'react';
+
+function HomePage() {
+   return (
+      <>
+         <h2>Web Development Concepts</h2>
+         <nav class="nav-bar">
+                <a href="#servers">Web Servers</a>
+                <a href='front-end'>FrontEnd</a>
+                <a href="#descriptive-file-name">6 Major Specifications Webdev</a>
+                <a href="#external-stylesheets">5 ways to Incorporate Styles</a>
+                <a href="#forms">Form usability</a>
+                <a href="#DataTypes">Data Types in JavaScript</a>
+                <a href="#dom-changes">DOM Changes and Testing</a>
+         </nav>
+        <article id="servers">
+            <h3>Web Servers</h3>
+            <p>
+                "<strong>index.html</strong>" is a common default name for the "home" page of a website hosted on an Apache web server, which is the type of server used by OSU's Engineering server. This means that when
+                    a user navigates to a directory on an Apache web server, such as OSU's Engineering server, without specifying a particular file in the URL, the server will automatically look for a file named
+                    "<strong>index.html</strong>" in that directory and serve it as the default home page to the user's browser. It's worth noting that on other types of web servers, such as Microsoft's .NET platform,
+                    the default name for the homepage might be "<strong>default.html</strong>" instead of "<strong>index.html</strong>". Additionally, some servers may also look for other file names like 
+                    "<strong>index.js</strong>" or "<strong>index.php</strong>" as the default home page depending on the server's configuration and the programming language used for the website. This default file,
+                    whatever its name may be, plays an important role in website organization and navigation as it allows users to easily access the content they are looking for and ensures that the website's file
+                        structure remains organized.     
+            </p>
+            <p>
+                
+                When accessing a webpage from a remote web server, the browser sends an HTTP request that includes various details in the response headers, such as <strong>status codes</strong> indicating the outcome
+                    of the request. The web server listens on specific port numbers, such as <strong>port 80</strong> for HTTP or <strong>port 443</strong> for HTTPS, for incoming requests. In contrast, when accessing
+                    a webpage locally on a computer, the browser reads files directly from the local file system, without making a request to a remote web server, so there is no need for ports or status codes. 
+                    Furthermore, when accessing a webpage from a remote web server, there are typically more details available in the response headers and request headers, which can be explored using the browser's 
+                    Developer Tools. These details provide insights into the network activity and information exchanged between the browser and the remote web server during the request and response process. Reviewing
+                    these details can help in understanding the differences in how web servers and browsers handle requests and responses when accessing webpages locally versus from a remote web server.
+            </p>
+            <p>
+                
+                When accessing a webpage from a web server, the server can provide a <strong>favicon.ico</strong> file in the response header, which allows the browser to display the website's icon in the address bar. 
+                This <strong>favicon.ico</strong> file is typically provided automatically by the web server, such as the OSU server in this case. Similarly, <strong>main.css</strong> and <strong>main.js</strong> files 
+                may be included in the server's response to provide CSS and JavaScript code for styling and interactivity. However, when accessing a webpage locally, these files may not be present unless manually included
+                    in the local files, as the local file system does not have the capability to dynamically provide them like a web server. The presence or absence of these files, as well as specific response codes like 
+                    <strong>404 (Not Found)</strong>, which indicate whether a requested resource was found on the web server, may vary depending on server configuration and website setup. It's important to note that the 
+                    status code 404 is related to the existence of the files and not their use in the file, and it is one of the many response codes used by web servers to communicate the status of a request made by the browser.
+            
+            </p>
+            <p>
+                
+                In the given URL "https://web.engr.oregonstate.edu/~hiural/a1-hiural/", the <strong>scheme</strong> is "https", which defines the protocol used to access the resource on the web. The <strong>subdomain</strong>
+                    is "web.engr" and the <strong>domain</strong> is "oregonstate.edu", which together make up the <strong>host domain</strong>, indicating the address of the web server that hosts the webpage. The "~hiural" 
+                    is the <strong>subdirectory</strong> or <strong>subdomain</strong>, which is a directory within the server's root directory that points to a specific user's home directory. Finally, "a1-hiural" is the
+                    <strong>resource</strong>, which refers to a specific file or directory within the subdirectory. In this case, it could be a webpage, an image, a stylesheet, or any other resource that the server can serve.
+            </p>
+        </article>
+        <h2>FrontEnd Designs</h2>
+        <article id="front-end">
+            <p>
+                <strong>Frontend design</strong> encompasses the visual and interactive aspects of creating a website or web application. It involves designing the graphical user interface (GUI), which includes the layout,
+                    color scheme, typography, imagery, and navigation systems. The goal of frontend design is to create an engaging and intuitive experience for users, ensuring that the website or web application is visually
+                    appealing, easy to navigate, and user-friendly. Frontend design also considers the latest trends and best practices in the field to stay up-to-date with user expectations. <strong>Usability</strong> is
+                    a crucial aspect of frontend design, as it measures the quality of the user experience when interacting with the website or web application. A well-designed frontend should prioritize usability, ensuring
+                    that users can easily understand and use the website or web application to achieve their goals.
+            </p>
+            <p>
+                <strong>Page layout tags</strong>, including <strong>block-level elements</strong>, <strong>headlines</strong>, <strong>paragraphs</strong>, and others, serve a critical purpose in structuring and organizing content within a webpage. These tags are employed to create distinct sections and facilitate the clear demarcation and separation of different parts of a webpage. Browsers typically display these page layout tags with a <strong>newline</strong> before and after the element, visually signifying a block of content. Despite lacking inherent visual styles, these tags play a pivotal role in aiding machines, such as search engine robots and screen readers, in comprehending the structure and components of a webpage. For instance, the introduction of new names for areas of a page, such as <strong>header</strong>, <strong>nav</strong>, <strong>main</strong>, <strong>section</strong>, <strong>aside</strong>, and <strong>footer</strong>, in HTML5 provides meaningful information to machines about the purpose and content of each section. This, in turn, contributes to improved accessibility and overall understanding of the webpage's structure for both human users and automated systems.
+            </p>
+            
+            <dl>
+                <dt><strong>Effective</strong></dt>
+                <dd>Helping users meet their goal(s) accurately.</dd>
+                <dt><strong>Efficient</strong></dt>
+                <dd>Enabling users to perform tasks with the least number of steps and quickly achieve results.</dd>
+                <dt><strong>Easy to navigate</strong></dt>
+                <dd>Allowing users, especially new ones, to easily locate their goals through intuitive navigation.</dd>
+                <dt><strong>Error-free</strong></dt>
+                <dd>Avoiding accessibility and availability issues by identifying and addressing common errors made by users.</dd>
+                <dt><strong>Enjoyable to use</strong></dt>
+                <dd>Engaging users and catering to the unique needs of the intended audience through content and design.</dd>
+            </dl>
+        
+            <p>
+                <strong>Text anchors</strong> and <strong>navigation</strong> play distinct roles in web design, serving different purposes. <strong>Text anchors</strong> are utilized to create hyperlinks within a webpage, 
+                enabling users to seamlessly navigate to specific content on the same page. On the other hand, <strong>navigation</strong> facilitates movement between different pages or sections of a website, providing users
+                    with a structured means of accessing different areas of the website. <strong>Text anchors</strong> are typically integrated within paragraphs or other HTML elements, providing intra-page navigation, while 
+                    <strong>navigation</strong> is typically positioned at strategic locations on a webpage, such as the top, bottom, or side, to enable inter-page navigation. Both <strong>text anchors</strong> and 
+                    <strong>navigation</strong> are crucial elements in enhancing the user experience, ensuring easy and efficient access to content within a website.
+            </p>
+        </article>
+        
+        
+        <h2> What are the 6 major specifications of images for the web?  And why?</h2>
+        <article id="descriptive-file-name">
+            <h3>Descriptive File Name</h3>
+            <p>
+                To improve search engine optimization (SEO), file names should include who, what, when, and where as much as possible. Use descriptive but concise file names, e.g. "german-shepard-puppy-ball.jpg". This helps search engine bots categorize the image for related searches.
+            </p>
+            <h3>Small File Size</h3>
+            <p>
+                Reduce file sizes for faster load times. Serve high resolution images only to high resolution devices using srcset="" and sizes="" attributes. Refer to image compression techniques such as lossy and lossless compression for optimizing file sizes.
+            </p>
+            <h3>Exact Dimensions</h3>
+            <p>
+                Crop and reduce image sizes to fit the dimensions of the space in your web page. Serving oversized images can result in slow loading times. For example, avoid serving an 8000px wide image in a 600px wide block.
+            </p>
+            <h3>Correct File Format</h3>
+            <p>
+                Use appropriate file formats for different types of images. Online photos are usually .JPG, line-art images like logos and icons are usually .GIF (or sometimes 8-bit .PNG), and graphics with true transparency need 24-bit .PNG.
+            </p>
+            <h3>Reduced Resolution</h3>
+            <p>
+                Consider providing multiple image sizes for different resolutions, as monitors render between 72 or 300+ pixels per inch (ppi). Higher resolutions are now available, so offering reduced resolution images has become a standard.
+            </p>
+            <h3>Color Mode</h3>
+            <p>
+                Use RGB color mode for .PNG, .JPG, .SVG, and .WebP images, and Indexed color mode for .GIF images.
+            </p>
+            <h3>Which file formats are most appropriate for photos and for line art? And why?</h3>
+            <p>
+                PNG (Portable Network Graphics) is often considered the best file format for line art due to its lossless compression and support for transparency. PNG is capable of preserving sharp edges and fine details, making it ideal for line art, logos, and icons that require precise rendering. Additionally, PNG supports alpha channel transparency, which allows for smooth and accurate transparency in areas with partial or varying opacity. This makes PNG ideal for line art and graphics that require transparent backgrounds or overlaying on other images or backgrounds without losing quality or introducing artifacts. Another advantage of PNG is that it supports multiple color depths, including 8-bit indexed color for smaller file sizes and 24-bit true color for higher color accuracy and image quality. This flexibility allows for optimal balancing of file size and image quality based on the specific needs of the line art, making PNG a preferred choice for line art and graphics with sharp edges, solid colors, and transparency requirements.
+            </p>
+        </article>
+
+        <h2>
+            5 Ways to Incorporate Styles
+        </h2>
+        <article id="external-stylesheets">
+        
+            <h3>External CSS Stylesheets</h3>
+            <p>
+                Using external CSS stylesheets is a common and efficient way to define and apply styles to web elements in a website or web application. Stylesheets are typically stored in separate .css files and linked to HTML documents using the &lt;link&gt; element in the &lt;head&gt; section of the HTML document. This allows for centralization of styles and promotes separation of concerns between HTML and CSS.
+            </p>
+            <h3 id="advantages-external-stylesheets">Advantages of External CSS Stylesheets</h3>
+            <ul>
+                <li>
+                    Global Application: By linking an external stylesheet in the global &lt;head&gt; area of a website, the styles defined in that stylesheet can be applied to all pages of the website that link to that single, global stylesheet. This ensures consistency in styles across the entire website, making it easier to manage and maintain.
+                </li>
+                <li>
+                    Component-specific Styles: In addition to the global stylesheet, specific components or sections of a website can have their own separate stylesheets that can be linked after the global stylesheet or imported within the global stylesheet. This allows for component-specific styles that can be easily updated or modified without affecting other parts of the website.
+                </li>
+                <li>
+                    Efficiency: External CSS stylesheets are cached by the browser, which means that once the stylesheet is loaded, subsequent requests for the same page will not require re-downloading the same stylesheet, resulting in faster load times and improved performance.
+                </li>
+            </ul>
+            <h3>Embedded Styles in HTML and JavaScript</h3>
+            <p>
+                While using external CSS stylesheets is the preferred method for applying styles to web elements, it is also possible to embed styles directly in HTML and JavaScript files. However, this method is typically reserved for one-off style changes and is not recommended for extensive styling.
+            </p>
+            <h3 id="embedded-styles-within-style-tags">Embedded Styles within &lt;style&gt; Tags</h3>
+            <p>In HTML, styles can be defined within &lt;style&gt; tags in the &lt;head&gt; section of an HTML document. This approach, known as embedded styles, allows for inline styling of HTML elements, where CSS (Cascading Style Sheets) code is placed directly within the HTML file. With embedded styles, CSS rules can be written inside &lt;style&gt; tags, which are placed within the &lt;head&gt; section of an HTML document. This allows for fine-grained control over the presentation and layout of HTML elements, such as setting font styles, colors, margins, padding, and more. Embedded styles provide a way to apply specific styles to individual HTML elements, overriding any external or global styles that may be applied to the same elements. However, it's worth noting that using embedded styles can result in less maintainable and harder-to-manage code compared to external CSS stylesheets, as the styles are mixed with the HTML code, making it harder to separate concerns and update styles consistently across multiple pages. Nonetheless, embedded styles can be useful in certain scenarios where inline styling is needed for quick and specific styling changes, or when creating HTML email templates, where external stylesheets may not be supported by some email clients.</p>
+            <h3 id="inline-styles-within-elements">Inline Styles within Elements</h3>
+            <p>
+                Styles can be applied directly to HTML elements using the `style` attribute and value. This allows for inline styling of individual elements.
+            </p>
+            <h3 id="styles-in-javascript-files">Styles in JavaScript Files</h3>
+            <p>
+                Styles can be defined in JavaScript files, typically using template literals within a JavaScript function. This allows for dynamic styling of elements using JavaScript.
+            </p>
+            <h3 id="manipulating-dom-javascript">Manipulating DOM with Regular JavaScript</h3>
+            <p>
+                Styles can also be applied using regular JavaScript by manipulating the Document Object Model (DOM) properties of HTML elements. This allows for dynamic styling of elements using JavaScript.
+            </p>
+        </article>
+        <h2>Form usability, elements and attributes, best practices, and accessibility: What are the 6 major goals of accessible forms? And why?</h2>
+        <article id="forms">
+            <h3>6 Major Goals</h3>
+            <p>
+                Providing clear instructions above the form and in the labels is essential for making the form accessible to everyone.
+                    This way, users will know what information to input and what the purpose of the form is. Using placeholder values is
+                    not recommended, as it may confuse some users, especially those who rely on screen readers. The instructions should
+                    be concise, easy to understand, and placed in a prominent location, such as at the top of the form or next to the
+                    relevant field. Doing so ensures that users will not struggle with filling out the form and can complete it accurately.
+            </p>
+            <p>
+                Letting users know why you're gathering the data and which fields are required is important for transparency and trust. 
+                Users have the right to know what data they are sharing and why it is necessary. By informing users about the purpose of
+                    the form and which fields are required, you will increase their confidence and willingness to share their information. 
+                    This information can be provided in the instructions or within the field label itself. Being transparent with your users
+                    can create a positive user experience and help you build long-lasting relationships with your audience.
+
+
+            </p>
+            <p>
+                Setting the first field to autofocus can significantly improve the user experience of a form. 
+                This feature allows users to start typing immediately without the need to navigate to the first field.
+                    It makes the process of filling out a form faster and more efficient, especially for users who rely on 
+                    assistive technologies such as voice recognition software or screen readers. By setting the first field to 
+                    autofocus, you are prioritizing user experience and accessibility, which can ultimately lead to higher engagement and conversions.
+
+
+            </p>
+            <p>
+                Ensuring each form control can be filled in using the keyboard is crucial for users who cannot or choose
+                    not to use a mouse or trackpad. This is especially important for individuals with motor impairments or 
+                    disabilities that affect their fine motor skills. All form elements should be navigable using the keyboard
+                    and have clear focus states to indicate where the user is in the form. By doing so, you are making the form 
+                    more inclusive and accessible to all users, regardless of their physical abilities.
+
+
+            </p>
+            <p>
+                Adding tab indexing to complex forms helps users understand in which order the fields should be filled.
+                    This is especially important for lengthy and complex forms that require a lot of user input. Tab indexing
+                    allows users to navigate between fields using the tab key, making the process more streamlined and efficient. 
+                    It also provides a visual cue for users as to which field they are currently filling out and which ones they 
+                    have left to complete. By making complex forms more accessible and easier to navigate, you can improve the 
+                    user experience and increase form submissions.
+            </p>
+            <p>
+                Ensuring that validation messages are screen readable is critical for users who rely on 
+                assistive technologies such as screen readers. Built-in HTML validation messages can be difficult to read 
+                and may not be accessible to all users. To ensure that validation messages are screen readable, it is recommended 
+                to use ARIA live regions or custom validation messages that are compatible with screen readers. Doing so will make it 
+                easier for users to understand why their submission was not accepted and what they need to do to correct it. By improving 
+                the accessibility of your form, you can create a more inclusive user experience for all users.
+            </p>
+
+            <h3 id="question-forms">What are the major tags, their attributes, and their purposes?  </h3>
+            <p>Forms in HTML are created using a number of tags, each with its own set of attributes and purposes. The most commonly used tags 
+                include <code>&lt;form&gt;</code>, which defines the overall form; <code>&lt;input&gt;</code>, which creates various types of input
+                    fields, such as text boxes and radio buttons; <code>&lt;label&gt;</code>, which provides a label for an input field; <code>&lt;select&gt;</code>,
+                    which creates a drop-down list; and <code>&lt;button&gt;</code>, which creates a button that can be used to submit the form or perform other
+                    actions. These tags have a variety of attributes that can be used to further define their behavior, such as <code>type</code>, <code>name</code>,
+                    and <code>value</code>. By understanding how these tags and attributes work together, developers can create effective and accessible forms
+                        that help users interact with websites and web applications in meaningful ways.
+            </p>
+
+            <h3 id="question-form-2">What are the major form style recommendations to improve usability?  And why?</h3>
+            <p>When styling forms, it is important to keep legibility, accessibility, and readability in mind. To achieve this, there are a variety of 
+                recommended styles that can be applied to elements such as fieldset, legend, label, input, button, and textarea. Adding a :focus style 
+                to the first field with color and/or border changes can draw attention to it. The ::placeholder style can improve the legibility of help
+                    text by adjusting its color. Using :required (for the attribute) and label.required:after (for the class) can tell users which fields 
+                    are necessary, with various property value changes such as colors. However, it is important to avoid using pure black and pure white. 
+                    Additionally, the font and padding of the select element can be updated for better readability. Overall, by applying these recommended
+                    styles, forms can become more user-friendly and accessible.
+            </p>
+
+        
+        
+            <h3 id="Express">Node, npm, and Express: What are these three technologies, and how can we use them to improve the web development experience?</h3>
+            <p>
+                Node, npm, and Express are three technologies that are widely used in modern web development. Node is a server-side JavaScript runtime that 
+                allows developers to run JavaScript on the server, making it possible to build full-stack applications using a single programming language. 
+                Npm is a package manager for Node that allows developers to easily install, manage, and share reusable code modules, called packages. Express 
+                is a popular web framework for Node that provides a set of tools and features for building scalable and efficient web applications.
+            </p>
+            <p>
+                By using Node, npm, and Express together, developers can improve the web development experience in several ways. For one, they can streamline 
+                the development process by enabling faster and more efficient development, testing, and deployment of web applications. Additionally, using 
+                Node and Express can lead to better performance and scalability, since both are designed to handle large-scale, real-time applications. Finally,
+                    npm provides access to a vast ecosystem of open-source packages and libraries that can help developers save time and effort by reusing existing
+                    code rather than building everything from scratch.
+            </p>
+        </article>
+        <h2>Data Types in JavaScript</h2>
+        <article id="DataTypes">
+            <h3>Data Types</h3>
+            <p>
+                JavaScript is a dynamically-typed language, which means that variables can hold values of any data type. There are six main data types in JavaScript: string, number, boolean, null, 
+                undefined, and symbol. Strings represent text data and are enclosed in quotes. Numbers represent numerical values and can be integers, decimals, or even special 
+                values like NaN or Infinity. Booleans represent true/false values. Null and undefined represent intentional or unintentional absence of values, respectively. Symbols are
+                    unique and immutable data types that can be used as object keys. Understanding the different data types in JavaScript is essential for writing clean and efficient code.
+            </p>
+            <h3 id="question-1">How are objects, arrays, and JSON used?</h3>
+            <p>
+                Objects, arrays, and JSON are fundamental concepts in JavaScript. Objects are a collection of properties, where each property consists of a key-value pair. They can be used to 
+                represent real-world entities, such as a person or a car. Arrays, on the other hand, are used to store lists of data, such as a list of names or a list of numbers. JSON, or JavaScript 
+                Object Notation, is a lightweight data interchange format that is easy for humans to read and write, and easy for machines to parse and generate. It is often used to transmit data between
+                    a server and a web application. Understanding these concepts is crucial for building dynamic and interactive web applications.
+            </p>
+            <h3 id="question-2">How are conditionals and loops used?</h3>
+            <p>
+                Objects, arrays, and JSON are fundamental concepts in JavaScript. Objects are a collection of properties, where each property consists of a key-value pair. They can be used to represent
+                    real-world entities, such as a person or a car. Arrays, on the other hand, are used to store lists of data, such as a list of names or a list of numbers. JSON, or JavaScript Object Notation,
+                    is a lightweight data interchange format that is easy for humans to read and write, and easy for machines to parse and generate. It is often used to transmit data between a server and a
+                    web application. Understanding these concepts is crucial for building dynamic and interactive web applications.
+            </p>
+            <h3 id="question-3">What is object-oriented programming?</h3>
+            <p>
+                Object-oriented programming (OOP) is a programming paradigm that uses objects to organize code. In JavaScript, objects are used to store data and functions together, making it easier to organize 
+                and reuse code. OOP focuses on encapsulating code in objects, which can have properties and methods. Encapsulation is the practice of hiding the implementation details of an object from the outside
+                world, so that changes to the object's internal structure do not affect the rest of the program. OOP also includes concepts like inheritance, where objects can inherit properties and methods from 
+                other objects, and polymorphism, where different objects can have the same interface but behave differently.
+            </p>
+            <h3 id="question-4">What is functional programming?</h3>
+            <p>
+                Functional programming is a programming paradigm that focuses on writing software by composing pure functions, avoiding shared state, mutable data, and side-effects. It is a declarative programming style,
+                    meaning that the emphasis is on what should be computed and not on how it should be computed. In functional programming, functions are treated as first-class citizens, meaning that they can be assigned 
+                    to variables, passed as arguments to other functions, and returned as values from functions. By using higher-order functions, closures, and other functional programming concepts, it's possible to write 
+                    code that is more modular, easier to test and reason about, and less prone to errors.
+            </p>
+        </article>
+        <h2 >DOM Changes and Testing</h2>
+        <article id="dom-changes">
+            <h3>Why Do Developers Update the DOM of a Page Using JavaScript and Express?</h3>
+            <p>
+                Developers use JavaScript and libraries like Express.js to dynamically update the Document Object Model (DOM) of a page. The DOM represents the structure of a webpage and can be manipulated with JavaScript to change content, structure, and styles of the page without reloading. This leads to a more responsive and interactive user experience as changes can be made instantly in response to user actions.
+            </p>
+            <p>
+                Express.js, a Node.js framework, can be used to build web applications that serve dynamic content. It can handle HTTP requests, define routing rules, and produce responses, which can include dynamically updating the DOM. These capabilities, combined with JavaScript's ability to manipulate the DOM on the client side, make for powerful, efficient, and interactive web development.
+            </p>
+            <p>
+                Testing DOM changes is crucial for ensuring the correct functionality of a website. Developers can use random data for testing to simulate various scenarios and edge cases that might occur with real-world use. This can help catch bugs and issues that might not surface under ideal conditions or with static test data. As part of a comprehensive testing strategy, testing DOM changes with random data can contribute to building robust and reliable web applications.
+            </p>
+        </article>
+      </>
+   );
+}
+
+export default HomePage;
+
+
+            
+    
+
+        

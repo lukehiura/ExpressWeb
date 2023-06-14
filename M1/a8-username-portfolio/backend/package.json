@@ -1,0 +1,25 @@
+{
+  "name": "finance-tracker",
+  "version": "1.0.0",
+  "description": "A personal finance tracker application that uses MongoDB as the database. The application allows users to track their income, expenses, and financial goals.",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon controller.mjs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "personal",
+    "finance",
+    "tracker",
+    "MongoDB"
+  ],
+  "author": "Luke Hiura",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.1.4",
+    "express": "^4.18.2",
+    "mongoose": "^7.2.2",
+    "nodemon": "^2.0.22",
+    "rest": "^2.0.0"
+  }
+}

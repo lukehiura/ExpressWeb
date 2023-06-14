@@ -1,0 +1,46 @@
+# Node.js
+node_modules/
+
+# React
+build/
+dist/
+
+# Front-end dependencies
+bower_components/
+jspm_packages/
+
+# Package managers
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# IDE files
+.vscode/
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Compiled output
+*.log
+*.log.*
+*.bak
+*.cache
+*.diff
+*.err
+*.min.js
+*.min.css
+*.swp
+*.swo
+*.tgz
+*.zip
+*.jar
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
