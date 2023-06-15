@@ -8,7 +8,7 @@ function TableComponent({ collection, deleteFunction, editFunction }) {
     <>
       <table>
         <caption>
-          <Link to="/transactions/create">
+          <Link to="/log/create">
             <FaPlusCircle />
           </Link>
         </caption>
@@ -16,6 +16,7 @@ function TableComponent({ collection, deleteFunction, editFunction }) {
           <tr>
             <th>Description</th>
             <th>Amount</th>
+            <th>Currency</th>
             <th>Date</th>
             <th>Edit</th>
             <th>Delete</th>

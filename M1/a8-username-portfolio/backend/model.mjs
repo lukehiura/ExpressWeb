@@ -11,7 +11,7 @@ db.once('open', (err) => {
     console.error('Failed to connect to the server:', err);
     process.exit(1);
   } else {
-    console.log('Successfully connected to MongoDB "bank" collection using Mongoose.');
+    console.log('Successfully connected to MongoDB collection using Mongoose.');
   }
 });
 
@@ -30,16 +30,22 @@ const transactionSchema = new mongoose.Schema({
     required: true,
     default: Date.now,
   },
+  currency: {
+    type: String,
+    required: true,
+  },
+
 });
 
 const Transaction = mongoose.model('Transaction', transactionSchema);
 
-const createTransaction = async (description, amount, date) => {
+const createTransaction = async (description, amount, date, currency) => {
   try {
     const newTransaction = new Transaction({
       description,
       amount,
       date,
+      currency,
     });
 
     const savedTransaction = await newTransaction.save();
@@ -70,7 +76,7 @@ const retrieveTransactionById = async (id) => {
 };
 
 // Update a transaction document
-const updateTransaction = async (id, description, amount, date) => {
+const updateTransaction = async (id, description, amount, date, currency) => {
   try {
     const transaction = await Transaction.findById(id);
     if (!transaction) {
@@ -80,6 +86,7 @@ const updateTransaction = async (id, description, amount, date) => {
     transaction.description = description;
     transaction.amount = amount;
     transaction.date = date;
+    transaction.currency = currency
 
     const updatedTransaction = await transaction.save();
     return updatedTransaction;

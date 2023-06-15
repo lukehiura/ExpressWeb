@@ -13,7 +13,10 @@ function TableRowComponent({ transaction, onDelete, onEdit }) {
   return (
     <tr>
       <td>{transaction.description}</td>
-      <td>{transaction.amount}</td>
+      <td>
+         {transaction.amount}
+      </td>
+      <td>{transaction.currency}</td>
       <td>{transaction.date.slice(0, 10)}</td>
       <td>
         <FaEdit onClick={handleEdit} />

@@ -8,8 +8,9 @@ import GalleryPage from './pages/GalleryPage';
 import StaffPage from './pages/StaffPage';
 import OrderPage from './pages/OrderPage';
 import ContactPage from './pages/ContactPage';
-import LogPage from './pages/logPage';
+import LogPage from './pages/LogPage'; // assuming this is the correct path
 import CreatePage from './pages/CreatePage';
+import EditPage from './pages/EditPage';
 import TopicsPage from './pages/TopicsPage';
 
 
@@ -31,7 +32,8 @@ function App() {
               <Route path="/order" element={<OrderPage products={products} />} />
               <Route path="/contact" element={<ContactPage />} />
               <Route path="/log" element={<LogPage />} /> 
-              <Route path="/create" element={<CreatePage />} />
+              <Route path="/log/create" element={<CreatePage />} />
+              <Route path="/log/edit/:id" element={<EditPage />} />
               <Route path="/topics" element={<TopicsPage />} />
             </Routes>
           </section>
